@@ -4,66 +4,1270 @@
 
 /*----------- Page structur *
  ------------------------------------------------------------*/
-html, body
-  height: 100%
 
 .clear 
   clear: both
-.clearfix:after 
-  content: "."
-  display: block
-  height: 0
-  clear: both
-  visibility: hidden
 
-#wrapper
+.clearfix
+  &:before, &:after 
+    content: " "
+    display: table
+  
+  &:after 
+    clear: both
+
+
+.wrapper
   position: relative
-  overflow: hidden
-  min-height: 100%
   min-width: 320px
+
+.mobile-dark-wrap
+  display: none
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 80
+  background: rgba(0,0,0,0.6)
+  &.open 
+    display: block
 
 .container
   padding: 0 15px
+  margin: 0 auto
+  max-width: 1280px
+  width: 100%
+  @extend .clearfix
+  &:after
+    clear: both
+  +mobile
+    padding: 0 10px
 
+div.inline-block
+  display: inline-block
+
+// VISIBLE
+
+.visible-mobile 
+  display: none
+  +mobile
+    display: block
+
+.visible-tablet 
+  display: none
+  +tablet
+    display: block
+
+.visible-desktop
+  display: none
+  +desktop
+    display: block
+
+// HIDDEN
+
+.hidden
+  display: none
+
+.hidden-mobile
+  +mobile
+    display: none!important
+
+.hidden-tablet
+  @media only screen and (max-width: 768px)
+    display: none!important
+
+.hidden-desktop
+  @media only screen and (min-width: 1024px)
+    display: none!important
+
+.hidden-desktop-l
+  @media only screen and (min-width: 1300px)
+    display: none!important
+
+.tooltip
+  display: none
+  position: absolute
+  z-index: 10
+  left: 50%
+  top: 100%
+  transform: translate(-50%, 0)
+  margin-top: 3px
+  font-size: 13px
+  color: #ffffff
+  background-color: #666666
+  border-radius: 3px
+  min-width: 140px
+  padding: 3px 5px
+  text-align: center
+  +desktop
+    display: none!important
+
+  &:before
+    position: absolute
+    top: -6px
+    left: 50%
+    margin-left: -6px
+    content: ' '
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 6.5px 6px 6.5px
+    border-color: transparent transparent #666 transparent 
+
+.text-center
+  text-align: center
+.text-left
+  text-align: left
+.text-right
+  text-align: right
+
+.row
+  margin-left: -15px
+  margin-right: -15px
+  @extend .clearfix
+  +tablet
+    margin-right: -10px
+    margin-left: -10px
+  
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12
+  position: relative
+  min-height: 1px
+  padding-left: 15px
+  padding-right: 15px
+  +tablet
+    padding-left: 10px
+    padding-right: 10px
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11
+  float: left
+
+.col-xs-12
+  float: left
+  width: 100%
+
+.col-xs-11
+  width: 91.66666667%
+
+.col-xs-10
+  width: 83.33333333%
+
+.col-xs-9
+  width: 75%
+
+.col-xs-8
+  width: 66.66666667%
+
+.col-xs-7
+  width: 58.33333333%
+
+.col-xs-6
+  width: 50%
+
+.col-xs-5
+  width: 41.66666667%
+
+.col-xs-4
+  width: 33.33333333%
+
+.col-xs-3
+  width: 25%
+
+.col-xs-2
+  width: 16.66666667%
+
+.col-xs-1
+  width: 8.33333333%
+
+
+@media (min-width: 480px)
+  .col-mob-1, .col-mob-2, .col-mob-3, .col-mob-4, .col-mob-5, .col-mob-6, .col-mob-7, .col-mob-8, .col-mob-9, .col-mob-10, .col-mob-11
+    float: left
+  .col-mob-12
+    float: left
+    width: 100%
+  .col-mob-11
+    width: 91.66666667%
+  .col-mob-10
+    width: 83.33333333%
+  .col-mob-9
+    width: 75%
+  .col-mob-8
+    width: 66.66666667%
+  .col-mob-7
+    width: 58.33333333%
+  .col-mob-6
+    width: 50%
+  .col-mob-5
+    width: 41.66666667%
+  .col-mob-4
+    width: 33.33333333%
+  .col-mob-3
+    width: 25%
+  .col-mob-2
+    width: 16.66666667%
+  .col-mob-1
+    width: 8.33333333%
+
+@media (min-width: 768px)
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11
+    float: left
+  .col-sm-12
+    float: left
+    width: 100%
+  .col-sm-11
+    width: 91.66666667%
+  .col-sm-10
+    width: 83.33333333%
+  .col-sm-9
+    width: 75%
+  .col-sm-8
+    width: 66.66666667%
+  .col-sm-7
+    width: 58.33333333%
+  .col-sm-6
+    width: 50%
+  .col-sm-5
+    width: 41.66666667%
+  .col-sm-4
+    width: 33.33333333%
+  .col-sm-3
+    width: 25%
+  .col-sm-2
+    width: 16.66666667%
+  .col-sm-1
+    width: 8.33333333%
+
+@media (min-width: 1024px)
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11
+    float: left
+  .col-md-12
+    float: left
+    width: 100%
+  .col-md-11
+    width: 91.66666667%
+  .col-md-10
+    width: 83.33333333%
+  .col-md-9
+    width: 75%
+  .col-md-8
+    width: 66.66666667%
+  .col-md-7
+    width: 58.33333333%
+  .col-md-6
+    width: 50%
+  .col-md-5
+    width: 41.66666667%
+  .col-md-4
+    width: 33.33333333%
+  .col-md-3
+    width: 25%
+  .col-md-2
+    width: 16.66666667%
+  .col-md-1
+    width: 8.33333333%
+
+@media (min-width: 1230px)
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11
+    float: left
+  .col-lg-12
+    float: left
+    width: 100%
+  .col-lg-11
+    width: 91.66666667%
+  .col-lg-10
+    width: 83.33333333%
+  .col-lg-9
+    width: 75%
+  .col-lg-8
+    width: 66.66666667%
+  .col-lg-7
+    width: 58.33333333%
+  .col-lg-6
+    width: 50%
+  .col-lg-5
+    width: 41.66666667%
+  .col-lg-4
+    width: 33.33333333%
+  .col-lg-3
+    width: 25%
+  .col-lg-2
+    width: 16.66666667%
+  .col-lg-1
+    width: 8.33333333%
 
 /*----------- Navigation *
  ------------------------------------------------------------*/
 
 .breadcrumb
+  margin-bottom: 5px
+  li + li
+    &:before
+      content: '\00bb'
+      display: inline-block
+      margin: 0 5px
+
   > li
     list-style-type: none
     display: inline-block
     vertical-align: middle
-    &:before
-      content: '/ '
-    &:first-child
-      &:before
-        display: none
+    > a 
+      font-size: 14px
+      color: $orange
+  > li.active
+    color: #666666
 
+.pagination-wrap
+  margin-bottom: 20px
+  display: inline-block
+  +tablet
+    margin-top: 15px
+  +mobile
+    margin-top: 0
+
+.pagination-title
+  @extend .inline-block-middle
+  margin-right: 15px
+
+.pagination
+  @extend .inline-block-middle
+  margin-bottom: 0
+  > li 
+    display: inline-block
+    margin-right: 4px
+    > a 
+      color: #b5b3b3
+      font-size: 14px
+      @extend .inline-block-middle
+      padding: 3px 0
+      text-align: center
+      text-decoration: none
+      width: 26px
+      height: 26px
+      border: 1px solid #e1e1e1
+      border-radius: 3px
+      &:hover, &:focus
+        border-color: #b8b9b9
+    .prev
+      background-image: url('../images/sprite.png')
+      +sprite($breadcrumb-prev)
+      border: none
+    .next
+      background-image: url('../images/sprite.png')
+      +sprite($breadcrumb-next)
+      border: none
+
+  > li.active
+    > a 
+      border-color: #b8b9b9
+      color: $orange
 
 /*----------- header *
  ------------------------------------------------------------*/
 .header
   position: relative
-  padding: 15px 0
+
+.mobile-buttons
+  float: left
+  display: none
+  position: relative
+  z-index: 3
+  +tablet
+    display: block
+
+  > span 
+    width: 55px
+    height: 40px
+    display: inline-block
+    position: relative
+    &:before
+      position: absolute
+      content: ' '
+      top: 50%
+      left: 50%
+      background-image: url('../images/sprite.png')
+
+  .menu-toggle:before
+    margin-top: -7.5px
+    margin-left: -9px
+    +sprite($menu-toggle)
+
+  .form-toggle
+    border-left: 1px solid #ffffff
+    border-right: 1px solid #ffffff
+    &:before
+      margin-top: -9.5px
+      margin-left: -9.5px
+      +sprite($mobile-search)
+
+.hidden-panel
+  display: none
+  background-color: $grey
+  text-align: center
+  position: relative
+  z-index: 2
+  +desktop-large
+    display: block
+  +mobile
+    border-top: 1px solid #ffffff
+    border-bottom: 1px solid #ffffff
+
+  .search-form
+    display: none
+    margin: 1px
+    +desktop
+      display: block
+      float: left
+
+    +tablet
+      
+      max-width: 100%
+      width: 100%
+      display: none
+
+    &__input
+      height: 37px
+      border: 1px solid #cccccc
+      border-radius: 0px
+      padding: 10px
+      width: 280px
+      +tablet
+        font-size: 14px
+        width: 100%
+
+    &__submit
+      height: 37px
+      width: 37px
+
+  .search-form.open
+    transform: translateY(40px)
+    opacity: 1
+  
+  .header-cart
+    padding-left: 25px
+    padding-right: 25px
+    margin: 11px 0 6px
+    +desktop
+      float: right
+      padding-left: 10px
+      padding-right: 12px
+    +tablet
+      position: absolute
+      right: 0
+      width: 210px
+      margin-top: 13px
+
+    &__value, &__title
+      display: inline-block
+      vertical-align: middle
+      margin-right: 40px
+      +tablet
+        margin-right: 12px        
+
+    &__value 
+      +tablet
+        display: none
+
+  
+
+.header-panel
+  padding: 12px 0 20px
+  +desktop
+    text-align: center
+  +mobile
+    padding: 7px 0 10px
+
+  .search-form
+    +desktop
+      display: none
+  
+  .header-info
+    +desktop-large
+      float: right
+    +desktop
+      float: none
+
+  .header-cart
+    +desktop-large
+      display: none
+
+
+.aside-width
+  width: 275px 
+  +tablet
+    width: auto
 
 .logo
   float: left
-  margin: 0 20px 0 0
+  margin-top: 8px
+  margin-left: 12px
+  +tablet
+    margin-left: 0
+    max-width: 130px
+  +mobile
+    max-width: 110px
+
+.header-body
+  margin-left: 275px
+  margin-top: 10px  
+  +tablet
+    margin-left: 140px
+  +mobile
+    margin-left: 115px
+    margin-top: 0
+
+
+.search-form
+  display: inline-block
+  vertical-align: middle
+  max-width: 315px
+  width: 100%
+  position: relative
+  margin-right: 45px
+  +desktop-large
+    margin-top: 12px
+  +desktop
+    margin-top: 0
+    max-width: 279px
+  +tablet
+    max-width: 250px
+  
+  &__input
+    +placeholder-color(#b7b7b7)
+    background-color: #eeeeee
+    border-radius: 3px
+    padding: 10px 20px
+    font-size: 16px
+    line-height: 20px
+    height: 46px
+    border: none
+    color: #b7b7b7
+    font-style: italic
+
+  &__submit
+    position: absolute
+    right: 0
+    top: 0
+    @extend .orange-gradient
+    border: none
+    width: 46px
+    height: 46px
+    border-radius: 3px
+    cursor: pointer
+    &:before
+      position: absolute
+      content: ' '
+      top: 50%
+      left: 50%
+      margin-top: -9.5px
+      margin-left: -9.5px
+      background-image: url('../images/sprite.png')
+      +sprite($search)
+      
+
+.header-info
+  display: inline-block
+  vertical-align: middle
+  padding-left: 56px 
+  position: relative
+  margin-right: 66px
+  text-align: left
+  +desktop-large
+    margin-right: 25px
+  +tablet
+    padding-left: 0
+    margin-right: 0
+
+  .phone-icon
+    position: absolute
+    left: 0
+    top: 50%
+    margin-top: -22.5px
+    content: ' '
+    border: 1px solid #3f4b53
+    border-radius: 50%
+    width: 45px
+    height: 45px
+    +tablet
+      display: none
+
+    &:before
+      position: absolute
+      content: ' '
+      top: 50%
+      left: 50%
+      margin-top: -11.5px
+      margin-left: -11.5px
+      background-image: url('../images/sprite.png')
+      +sprite($phone-black) 
+
+  &__phone-number
+    a
+      font-size: 20px
+      line-height: 24px
+      color: $orange
+      font-weight: 700
+      text-decoration: none
+      margin-bottom: 4px
+      display: inline-block
+
+      +mobile
+        font-size: 13px
+    span 
+      color: $black
+      +mobile
+        font-size: 12px
+
+  &__shedule
+    font-size: 15px
+    +tablet
+      font-size: 13px
+    span 
+      font-size: 10px
+      line-height: 10px
+      vertical-align: top
+
+.header-cart
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  padding-left: 56px  
+  
+  .cart-icon
+    position: absolute
+    left: 0
+    top: 50%
+    margin-top: -22.5px
+    content: ' '
+    border: 1px solid #3f4b53
+    border-radius: 50%
+    width: 45px
+    height: 45px
+    &:before
+      position: absolute
+      content: ' '
+      top: 50%
+      left: 50%
+      margin-top: -11.5px
+      margin-left: -11.5px
+      background-image: url('../images/sprite.png')
+      +sprite($cart-black) 
+
+  &__title
+    font-size: 15px
+    margin-bottom: 5px 
+    +mobile
+      font-size: 14px
+
+  &__value
+    font-size: 15px
+    span 
+      font-weight: 700
+      color: $orange
+      font-size: 20px
+
+  &__btn
+    display: inline-block
+    vertical-align: top
+    width: 25px 
+    height: 19px
+    background-image: url('../images/sprite.png')
+    +sprite($cart-grey)
+
+.header-links
+  margin-top: 4px
+  &--mobile
+    margin-top: 10px
+    a
+      font-size: 14px
+
+  > div 
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    margin-right: 10px
+    &:before
+      position: absolute
+      left: 0
+      top: 0
+      content: ' '
+      background-image: url('../images/sprite.png')
+
+  a
+    color: #666666
+    font-size: 13px
+    line-height: 15px
+
+  &__request-call
+    padding-left: 23px
+    &:before
+      +sprite($phone-incoming)
+
+  &__location
+    padding-left: 13px
+    &:before
+      +sprite($location-orange)
+
+  &__cart
+    padding-left: 21px
+    &:before
+      +sprite($cart-small)
+
+.navbar
+  @extend .orange-gradient
+  +tablet
+    text-align: center
+  +mobile
+    height: 40px
+
+.drowdown-wrap
+  float: left
+  +tablet
+    float: none
+    text-align: center
+  +mobile
+
+.drowdown-btn-toggle
+  position: relative
+  z-index: 3000
+  padding: 9px 10px 9px 15px
+  background-color: #fec64f
+  border-top-left-radius: 3px
+  border-top-right-radius: 3px
+  +desktop
+    border-radius: 4px
+    background: none
+  &--open
+    background-color: #fec64f
+    border-radius: 0px
+    border-top-left-radius: 3px
+    border-top-right-radius: 3px
+    transition: background 0.15s ease
+
+
+.drowdown
+  position: relative
+  max-width: 230px
+  width: 100%
+  margin-top: 4px
+  transition: background 0.15s ease
+  +tablet
+    display: inline-block
+    max-width: 290px
+
+
+  .drowdown-title
+    color: #010101
+    font-size: 17px
+    font-family: Calibri, Arial, sans-serif
+    text-decoration: none
+    display: inline-block
+    vertical-align: top
+    margin-right: 15px
+    +desktop
+      color: #ffffff
+
+  .drowdown-toggle
+    width: 18px
+    float: right
+    cursor: pointer
+    .icon-bar
+      display: block
+      width: 100%
+      height: 4px
+      background: #ffffff
+    .icon-bar + .icon-bar
+      margin-top: 2px
+
+.submenu.open
+  display: block
+
+.submenu
+  min-width: 710px
+  padding: 35px 10px 15px
+  background-color: #fff7d6
+  position: absolute
+  top: -10px
+  left: 100%
+  display: none
+  +desktop
+    min-width: 485px
+  +tablet
+    position: static
+    padding: 5px 0 0
+    min-width: auto
+    background-color: #ffffff
+    max-width: 230px
+    margin: 0 auto 10px
+    border: 1px solid #f8d5bf
+
+  &__section
+    padding: 0 25px 10px
+    border-right: 1px solid #f8d5bf
+    display: inline-block
+    min-height: 350px
+    vertical-align: top
+    +desktop
+      border: none
+      margin-bottom: 20px
+      min-height: 100%
+    +tablet
+      display: block
+      padding: 0
+      margin: 0
+
+    &:last-child 
+      border: none
+
+  &__title
+    font-size: 24px
+    font-family: 'Trebuchet MS', Arial, sans-serif
+    margin-bottom: 10px
+    position: relative
+    +tablet
+      display: none
+    &:before
+      position: absolute
+      content: ' '
+      background-image: url('../images/sprite.png')
+      top: 50%
+      margin-top: -8px
+      left: -22px 
+
+  .icon-addidional:before
+    +sprite($icon-additional)
+
+  .icon-modifiers:before
+    +sprite($icon-modifiers)
+
+  .icon-carton-plain:before
+    +sprite($icon-carton-plain)
+
+  ul 
+    margin-bottom: 0
+    > li 
+      > a
+        line-height: 24px
+        font-size: 14px
+        +tablet
+          font-size: 18px
+          text-decoration: none
+          border-bottom: 1px solid #f8d5bf
+          display: block
+          padding: 4px 10px
+
+
+.drowdown-menu
+  position: absolute
+  z-index: 150
+  background-color: #ffffff
+  left: 0 
+  width: 100%
+  padding: 10px 0
+  top: 100%
+  border: 1px solid rgba(227, 88, 0, 0.25)
+  border-top: none
+  border-bottom-right-radius: 3px
+  border-bottom-left-radius: 3px
+  +desktop
+    display: none
+    text-align: left
+  +tablet
+    padding: 0
+    background-color: #fff7d6
+  
+  &--open 
+    display: block
+
+  .caret-left
+    background-image: url('../images/sprite.png')
+    +sprite($menu-arrow)
+    position: absolute
+    top: 50%
+    right: 15px 
+    margin-top: -5.5px
+    +tablet
+      +sprite($plus)
+      margin-top: -11.5px
+      top: 25px
+  .caret-left.open
+    +sprite($minus)
+
+  > li 
+    position: relative
+    &:hover .submenu
+      @media only screen and (min-width: 767px)
+        display: block      
+
+    &:hover, &:focus
+      background-color: #fff7d6
+
+    +tablet
+      border-bottom: 1px solid #f8d5bf
+      padding: 0
+
+      &:last-child
+        border: none
+    > a 
+      position: relative
+      z-index: 2
+      padding: 0 10px
+      color: #2f2e2d
+      display: block
+      font-size: 17px
+      font-family: Calibri, Arial, sans-serif
+      line-height: 26px
+      text-decoration: none
+      +tablet
+        font-size: 21px
+        display: block
+        padding: 12px 15px
+        pointer-events: none
+
+.toggle-btn
+  padding: 5px 3px 6px
+  display: inline-block
+  &.open
+    background-color: #fec64f
+    border-top-right-radius: 4px
+    border-top-left-radius: 4px
+  .submenu-toggle
+
+      
+
+.submenu-toggle 
+  display: none
+  vertical-align: middle
+  margin: 0 10px
+  width: 23px
+  height: 24px
+  background-image: url('../images/sprite.png')
+  +sprite($submenu-toggle)
+  &.open
+    +sprite($submenu-toogle-open)
+
+  +desktop
+    display: inline-block
+
+.hidden-main-menu
+  position: absolute
+  z-index: 2000
+  left: -290px
+  top: 0 
+  background-color: #fff7d6
+  border: 1px solid #f8d5bf
+  max-width: 290px
+  transition: all 0.5s ease
+  &.open
+    transition: all 0.5s ease
+    left: 0
+  > li 
+    border-bottom: 1px solid #f8d5bf
+    &:last-child
+      border: none
+    > a 
+      display: block
+      padding: 15px 15px 15px 40px
+      font-size: 20px
+      text-decoration: none
+      position: relative
+      &:before
+        position: absolute
+        content: ' '
+        background-image: url('../images/sprite.png')
+        top: 50%
+        left: 7px
+  
+    .icon-magic-stick:before
+      margin-top: -11px
+      +sprite($magic-stick-orange)
+    
+    .icon-heart:before
+      +sprite($heart-orange)
+      margin-top: -10px
+
+    .icon-scale:before
+      +sprite($scales-orange)
+      margin-top: -8px
+
+    .icon-eye:before
+      margin-top: -7.5px
+      +sprite($eye-orange)
+
+.hidden-menu-item
+  display: none
+  border: 1px solid rgba(227, 88, 0, 0.25)
+  position: absolute
+  z-index: 10
+  top: 100%
+  right: 0
+  background-color: #fff7d6
+  border-bottom-right-radius: 4px
+  border-bottom-left-radius: 4px
+  &.open
+    display: block
+    > li 
+      > a 
+        padding: 16px 10px 16px 15px   
+        color: #2f2e2d
+        display: block
+        font-size: 20px
+        text-decoration: none
+
+.right-menu-wrap
+  float: right
+  +desktop
+    border-left: 1px solid #ffffff
+  +tablet
+    display: none
+
+.main-menu-wrap
+  position: relative
+  display: inline-block
+  +desktop
+    padding-left: 14px
+    border-left: 1px solid #ffffff
+  +tablet
+    display: none
+
+.menu
+  margin-bottom: 0
+  display: inline-block
+  margin: 10px 0
+  > li
+    display: inline-block
+    margin-right: 40px
+    +desktop-large
+      margin-right: 16px
+    +tablet
+      margin-right: 12px
+    > a 
+      color: #ffffff
+      font-weight: 500
+      font-size: 17px
+      text-decoration: none
+      font-family: Calibri, Arial, sans-serif
+      &:hover, &:focus
+        text-decoration: underline
+
+  .hidden-item
+    +desktop
+      display: none
+
+  .magic-stick
+    padding-left: 30px
+    position: relative
+  
+  .magic-stick:before
+    content: ' '
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: -11px
+    background-image: url('../images/sprite.png')
+    +sprite($magic-stick)
+
+.right-menu
+  float: right
+  margin: 3px 0
+  position: relative
+  transition: background-color 0.2s ease
+  +desktop
+    margin: 3px 0 0
+  +tablet
+    float: none
+    display: inline-block
+  +mobile
+    display: none
+  
+  &.open
+    transition: background-color 0.2s ease
+    background-color: #fec64f
+    border-top-left-radius: 3px
+    border-top-right-radius: 3px
+    .title 
+      color: #2f2e2d
+
+
+  .title 
+    color: #ffffff
+    font-size: 16px
+    display: inline-block
+    vertical-align: middle
+    margin: 5px 10px 5px 0
+    +desktop
+      margin: 8.5px 0 8.5px 10px
+
+.buttons-list
+  display: inline-block
+  vertical-align: middle
+  margin-bottom: 0
+  +desktop
+    display: none
+  
+  .buttons-list--title
+    display: none
+    font-size: 20px
+    color: #2f2e2d
+    text-decoration: none
+    +desktop
+      display: inline-block
+
+  > li 
+    position: relative
+    border-left: 1px dashed #fd9c5a
+    padding: 0 10px
+    height: 32px
+    display: table-cell
+    vertical-align: middle
+    &:hover .tooltip
+      display: block
+    a[class^="item"]
+      background-image: url('../images/sprite.png')
+      display: block
+      +desktop
+        float: right
+
+    .item-1
+      +sprite($heart-white)
+    .item-2
+      +sprite($scales-white)
+    .item-3
+      +sprite($eye)
+
+  &--open
+    width: 290px
+    position: absolute
+    z-index: 10
+    right: 0
+    top: 100%
+    background-color: #fff7d6
+    display: block
+    color: #000000
+    border-bottom-right-radius: 4px
+    border-bottom-left-radius: 4px
+    border: 1px solid rgba(227, 88, 0, 0.25)
+    > li 
+      display: block
+      border: none
+      height: 100%
+      padding: 16px 10px 16px 15px        
+
+      .item-1
+        +sprite($heart-orange)
+      .item-2
+        +sprite($scales-orange)
+      .item-3
+        +sprite($eye-orange)
 
 
 /*----------- Footer *
  ------------------------------------------------------------*/
+
+.tablet-menu
+  border-bottom: 3px solid #ffffff
+  padding: 15px 20px
+  text-align: left
+  .footer-menu
+    margin-bottom: 0
+    margin-top: 15px
+
+  .toggle-btn
+    float: right
+    position: relative
+    top: -9px
+  .toggle-btn.active
+    transform: rotate(180deg)
+
+
 .footer
   width: 100%
   position: relative
+  background-color: #9f9f9f
+  padding: 30px 0 0
+  color: #ffffff
+  text-align: center
+  +desktop
+    padding-top: 0
 
+  span[class^="icon"]
+    margin-right: 12px
 
+  &__section
+    margin-right: 105px
+    display: inline-block
+    vertical-align: top
+    text-align: left
+    +desktop-large
+      margin-right: 20px
+    +mobile
+      margin-right: 0
+    &:last-child
+      margin-right: 0
+
+  &__title
+    display: block
+    font-size: 16px
+    font-weight: 700
+    margin-bottom: 15px
+
+  .hidden-section
+    +desktop
+      display: none
+
+.footer-logo
+  margin-bottom: 25px
+
+.payment
+  color: #ffffff
+  .title
+    display: inline-block
+    margin-bottom: 10px
+
+.payment-list
+  span 
+    display: inline-block
+    background-image: url('../images/sprite.png')
+
+  .visa
+    +sprite($visa)
+  .mastercard
+    +sprite($mastercard)
+  .visa-electron
+    +sprite($visa-electron)
+
+.footer-menu
+  min-height: 60px
+  > li 
+    &:before
+      @extend .inline-block-middle
+      background-image: url('../images/sprite.png')
+      +sprite($list-arrow)
+      margin-right: 5px
+      content: ' '      
+    > a
+      color: #ffffff
+      line-height: 22px
+
+.footer-info
+  margin-bottom: 20px
+  > div 
+    margin-bottom: 8px
+    a
+      color: #ffffff
+      text-decoration: none
+
+.check-list
+  margin-left: 4px
+  > li 
+    position: relative
+    line-height: 20px
+    &:before
+      @extend .inline-block-middle
+      content: ' '
+      background-image: url('../images/sprite.png')
+      +sprite($footer-check)
+      margin-right: 12px
 
 /*----------- media style -----------*/
-
-// @media only screen and (max-width: 1200px)
-
 
 @media only screen and (max-width: 992px)
 
@@ -79,8 +1283,7 @@ html, body
   body, html
     height: auto
 
-  #wrapper
-    min-width: 1px
+  .wrapper
     margin-bottom: 0px
 
   .page-buffer
@@ -90,19 +1293,17 @@ html, body
     height: auto
 
   h1, .title-h1
-    font-size: $title-h1-size / 1.3
+    font-size: $title-h1-size / 1.2
 
   h2, .title-h2
     font-size: $title-h2-size / 1.2
 
 
-// @media only screen and (max-width: 600px)
-
-
 @media only screen and (max-width: 480px)
 
   h1, .title-h1
-   font-size: $title-h1-size / 1.5
+   font-size: 24px
+   display: none
 
   h2, .title-h2
    font-size: $title-h2-size / 1.3

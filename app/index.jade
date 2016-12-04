@@ -4,26 +4,795 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   //= template/head.jade
 
   body
-    #wrapper
+    .wrapper
 
       //= template/header.jade
 
       section#middle
-        .container
-          ul.breadcrumb
-            li
-              a(href='#') Main
-            li.active Inner page
+        .container.clearfix
+          .aside.aside-width
 
-          a.btn(href='#') Кнопка
+            form.filter-form
+              .filter-form__section
+                span.filter-form__title Цена, руб.
 
-          ul
-            li
-              a(href="")
-            li
-              a(href="")
-            li
-              a(href="")
+                .slider-price-wrapp
+                  .slider-price-wrapp
+                    #sliderPriceOne.slider-price
+                    .slider-price-inputs
+                      .slider-price-input-one от
+                        input#input-with-sliderPriceOne-0(type='text')
+                      .slider-price-input-two до
+                        input#input-with-sliderPriceOne-1(type='text')
+
+                  
+              .filter-form__section
+                span.filter-form__title Бренд:
+
+                .checkbox
+                  input(checked type="checkbox" class="checkbox" id="checkbox-1")
+                  label(for="checkbox-1") <span></span> 
+                    .checkbox__text АТБ
+                      .counter 18
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-2")
+                  label(for="checkbox-2") <span></span> 
+                    .checkbox__text Варвара
+                      .counter 33
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-3")
+                  label(for="checkbox-3") <span></span> 
+                    .checkbox__text Везувий
+                      .counter 43
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-4")
+                  label(for="checkbox-4") <span></span> 
+                    .checkbox__text Гори Ясно
+
+                .checkbox.checkbox--disabled
+                  input(disabled type="checkbox" class="checkbox" id="checkbox-5")
+                  label(for="checkbox-5") <span></span> 
+                    .checkbox__text Ермак
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-55")
+                  label(for="checkbox-55") <span></span> 
+                    .checkbox__text Кирасир
+                      .counter 6
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-6")
+                  label(for="checkbox-6") <span></span> 
+                    .checkbox__text Конвектика
+                      .counter 21
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-7")
+                  label(for="checkbox-7") <span></span> 
+                    .checkbox__text Теплодар
+                      .counter 9
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-8")
+                  label(for="checkbox-8") <span></span> 
+                    .checkbox__text Торнадо
+                      .counter 15
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-9")
+                  label(for="checkbox-9") <span></span> 
+                    .checkbox__text GRILL'D
+                      .counter 8
+
+              .filter-form__section
+                span.filter-form__title Объем парной:
+
+                .checkbox
+                  input(checked type="checkbox" class="checkbox" id="checkbox-1")
+                  label(for="checkbox-1") <span></span> 
+                    .checkbox__text 6-12 куб.м
+
+                .checkbox
+                  input( type="checkbox" class="checkbox" id="checkbox-10")
+                  label(for="checkbox-10") <span></span> 
+                    .checkbox__text 12-18 куб.м
+                      .counter 8
+
+                .checkbox
+                  input( type="checkbox" class="checkbox" id="checkbox-11")
+                  label(for="checkbox-11") <span></span> 
+                    .checkbox__text 18-24 куб.м
+                      .counter 60
+
+                .checkbox
+                  input( type="checkbox" class="checkbox" id="checkbox-12")
+                  label(for="checkbox-12") <span></span> 
+                    .checkbox__text 24-32 куб.м
+                      .counter 29
+
+                .checkbox
+                  input( type="checkbox" class="checkbox" id="checkbox-13")
+                  label(for="checkbox-13") <span></span> 
+                    .checkbox__text более 32 куб.м
+                      .counter 6
+
+              .filter-form__section
+                span.filter-form__title Вид топки:
+
+                .checkbox
+                  input(checked type="checkbox" class="checkbox" id="checkbox-14")
+                  label(for="checkbox-14") <span></span> 
+                    .checkbox__text без выноса
+                      .counter 18
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-15")
+                  label(for="checkbox-15") <span></span> 
+                    .checkbox__text с выносом
+                      .counter 85
+
+              .filter-form__section
+                span.filter-form__title Материал топки:
+
+                .checkbox
+                  input(checked type="checkbox" class="checkbox" id="checkbox-16")
+                  label(for="checkbox-16") <span></span> 
+                    .checkbox__text конструкционая сталь
+                      .counter 32
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-17")
+                  label(for="checkbox-17") <span></span> 
+                    .checkbox__text нержавеющая сталь
+                      .counter 11
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-18")
+                  label(for="checkbox-18") <span></span> 
+                    .checkbox__text чугун
+                      .counter 60
+
+              .filter-form__section
+                span.filter-form__title Каменка:
+
+                .checkbox
+                  input(checked type="checkbox" class="checkbox" id="checkbox-19")
+                  label(for="checkbox-19") <span></span> 
+                    .checkbox__text закрытая
+                      .counter 6
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-21")
+                  label(for="checkbox-21") <span></span> 
+                    .checkbox__text комбинированная
+                      .counter 30
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-20")
+                  label(for="checkbox-20") <span></span> 
+                    .checkbox__text открытая
+                      .counter 67
+
+              .filter-form__section
+                span.filter-form__title Дверца:
+
+                .checkbox
+                  input(checked type="checkbox" class="checkbox" id="checkbox-22")
+                  label(for="checkbox-22") <span></span> 
+                    .checkbox__text стальная глухая
+                      .counter 8
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-23")
+                  label(for="checkbox-23") <span></span> 
+                    .checkbox__text стальная панорамная
+                      .counter 25
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-24")
+                  label(for="checkbox-24") <span></span> 
+                    .checkbox__text стальная со стеклом
+                      .counter 13
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-25")
+                  label(for="checkbox-25") <span></span> 
+                    .checkbox__text чугунная глухая
+                      .counter 17
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-26")
+                  label(for="checkbox-26") <span></span> 
+                    .checkbox__text чугунная панорамная
+                      .counter 20
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-27")
+                  label(for="checkbox-27") <span></span> 
+                    .checkbox__text чугунная со стеклом
+                      .counter 24
+
+              .filter-form__section
+                span.filter-form__title Корпус:
+
+                .checkbox
+                  input(checked type="checkbox" class="checkbox" id="checkbox-28")
+                  label(for="checkbox-28") <span></span> 
+                    .checkbox__text кожух-конвектор
+                      .counter 27
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-29")
+                  label(for="checkbox-29") <span></span> 
+                    .checkbox__text комбинированный
+                      .counter 2
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-30")
+                  label(for="checkbox-30") <span></span> 
+                    .checkbox__text натуральный камень
+                      .counter 2
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-31")
+                  label(for="checkbox-31") <span></span> 
+                    .checkbox__text сетка-каменка
+                      .counter 61
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-32")
+                  label(for="checkbox-32") <span></span> 
+                    .checkbox__text без кожуха
+                      .counter 11
+
+              .filter-form__section
+                span.filter-form__title Теплообменник:
+
+                .checkbox
+                  input(checked type="checkbox" class="checkbox" id="checkbox-33")
+                  label(for="checkbox-33") <span></span> 
+                    .checkbox__text есть
+                      .counter 27
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-34")
+                  label(for="checkbox-34") <span></span> 
+                    .checkbox__text нет
+                      .counter 2
+
+              .filter-form__section
+                span.filter-form__title Бак (емкость бака):
+
+                .checkbox
+                  input(checked type="checkbox" class="checkbox" id="checkbox-35")
+                  label(for="checkbox-35") <span></span> 
+                    .checkbox__text есть
+                      .counter 47
+
+                .checkbox
+                  input(type="checkbox" class="checkbox" id="checkbox-36")
+                  label(for="checkbox-36") <span></span> 
+                    .checkbox__text нет
+                      .counter 28
+  
+              a(href="#!").btn.btn-grey <span class="icon-close"></span> Сбросить фильтр
+            
+            .visible-desktop-l
+              .facts
+                .fact
+                  span.fact__icon.icon-1
+                  span.fact__title Доставка
+                  p.fact__text Бесплатная доставка - 50 км! А также до транспортной компании.
+
+                .fact
+                  span.fact__icon.icon-2
+                  span.fact__title Пункты выдачи
+                  p.fact__text 4 пункта выдачи в Санкт- Петербурге + большой склад
+
+                .fact
+                  span.fact__icon.icon-3
+                  span.fact__title Монтаж печей
+                  p.fact__text Установка печей, каминов. Фото выполненных работ,14 монтажных бригад
+
+                .fact
+                  span.fact__icon.icon-4
+                  span.fact__title Торг уместен
+                  p.fact__text Напишите свое пожелание по цене и мы свяжемся с Вами максимально быстро.
+
+          .content
+            
+            //= template/yandex-modul.jade
+
+            //= template/breadcrumb.jade
+
+            h1.title-h1 Печи для бани
+
+            .visible-tablet
+              a(href="#!").btn.btn-responsive.js-filter-toggle Фильтры
+                span.icon
+
+            .visible-tablet.filter-dropdown
+              form.filter-form
+                .filter-form__body
+                  .row
+                    .col-xs-12.col-mob-12.col-sm-4
+
+                      .visible-mobile.js-show-filter
+                        .mobile-filter-btn
+                          span.mobile-filter-btn__title Цена, руб
+                          .plus
+
+                      .filter-form__section.filter-form__section--max
+                        span.filter-form__title Цена, руб.
+                        .slider-price-wrapp
+                          .slider-price-wrapp
+                            #sliderPriceTwo.slider-price
+                            .slider-price-inputs
+                              .slider-price-input-one от
+                                input#input-with-sliderPriceTwo-0(type='text')
+                              .slider-price-input-two до
+                                input#input-with-sliderPriceTwo-1(type='text')
+
+                      .visible-mobile.js-show-filter
+                        .mobile-filter-btn
+                          span.mobile-filter-btn__title Бренд
+                          .plus
+
+                      .filter-form__section
+                        span.filter-form__title Бренд:
+
+                        .checkbox
+                          input(checked type="checkbox" class="checkbox" id="checkbox-1")
+                          label(for="checkbox-1") <span></span> 
+                            .checkbox__text АТБ
+                              .counter 18
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-2")
+                          label(for="checkbox-2") <span></span> 
+                            .checkbox__text Варвара
+                              .counter 33
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-3")
+                          label(for="checkbox-3") <span></span> 
+                            .checkbox__text Везувий
+                              .counter 43
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-4")
+                          label(for="checkbox-4") <span></span> 
+                            .checkbox__text Гори Ясно
+
+                        .checkbox.checkbox--disabled
+                          input(disabled type="checkbox" class="checkbox" id="checkbox-5")
+                          label(for="checkbox-5") <span></span> 
+                            .checkbox__text Ермак
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-55")
+                          label(for="checkbox-55") <span></span> 
+                            .checkbox__text Кирасир
+                              .counter 6
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-6")
+                          label(for="checkbox-6") <span></span> 
+                            .checkbox__text Конвектика
+                              .counter 21
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-7")
+                          label(for="checkbox-7") <span></span> 
+                            .checkbox__text Теплодар
+                              .counter 9
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-8")
+                          label(for="checkbox-8") <span></span> 
+                            .checkbox__text Торнадо
+                              .counter 15
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-9")
+                          label(for="checkbox-9") <span></span> 
+                            .checkbox__text GRILL'D
+                              .counter 8
+
+                      .visible-mobile.js-show-filter
+                        .mobile-filter-btn
+                          span.mobile-filter-btn__title Теплообменник
+                          .plus
+                      
+                      .filter-form__section
+                        span.filter-form__title Теплообменник:
+
+                        .checkbox
+                          input(checked type="checkbox" class="checkbox" id="checkbox-33")
+                          label(for="checkbox-33") <span></span> 
+                            .checkbox__text есть
+                              .counter 27
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-34")
+                          label(for="checkbox-34") <span></span> 
+                            .checkbox__text нет
+                              .counter 2
+
+                    .col-xs-12.col-mob-6.col-sm-4
+
+                      .visible-mobile.js-show-filter
+                        .mobile-filter-btn
+                          span.mobile-filter-btn__title Каменка
+                          .plus
+                      
+                      .filter-form__section
+                        span.filter-form__title Каменка:
+
+                        .checkbox
+                          input(checked type="checkbox" class="checkbox" id="checkbox-19")
+                          label(for="checkbox-19") <span></span> 
+                            .checkbox__text закрытая
+                              .counter 6
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-21")
+                          label(for="checkbox-21") <span></span> 
+                            .checkbox__text комбинированная
+                              .counter 30
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-20")
+                          label(for="checkbox-20") <span></span> 
+                            .checkbox__text открытая
+                              .counter 67
+
+                      .visible-mobile.js-show-filter
+                        .mobile-filter-btn
+                          span.mobile-filter-btn__title Дверца
+                          .plus
+
+                      .filter-form__section
+                        span.filter-form__title Дверца:
+
+                        .checkbox
+                          input(checked type="checkbox" class="checkbox" id="checkbox-22")
+                          label(for="checkbox-22") <span></span> 
+                            .checkbox__text стальная глухая
+                              .counter 8
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-23")
+                          label(for="checkbox-23") <span></span> 
+                            .checkbox__text стальная панорамная
+                              .counter 25
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-24")
+                          label(for="checkbox-24") <span></span> 
+                            .checkbox__text стальная со стеклом
+                              .counter 13
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-25")
+                          label(for="checkbox-25") <span></span> 
+                            .checkbox__text чугунная глухая
+                              .counter 17
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-26")
+                          label(for="checkbox-26") <span></span> 
+                            .checkbox__text чугунная панорамная
+                              .counter 20
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-27")
+                          label(for="checkbox-27") <span></span> 
+                            .checkbox__text чугунная со стеклом
+                              .counter 24
+
+                      .visible-mobile.js-show-filter
+                        .mobile-filter-btn
+                          span.mobile-filter-btn__title Корпус
+                          .plus
+
+                      .filter-form__section
+                        span.filter-form__title Корпус:
+
+                        .checkbox
+                          input(checked type="checkbox" class="checkbox" id="checkbox-28")
+                          label(for="checkbox-28") <span></span> 
+                            .checkbox__text кожух-конвектор
+                              .counter 27
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-29")
+                          label(for="checkbox-29") <span></span> 
+                            .checkbox__text комбинированный
+                              .counter 2
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-30")
+                          label(for="checkbox-30") <span></span> 
+                            .checkbox__text натуральный камень
+                              .counter 2
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-31")
+                          label(for="checkbox-31") <span></span> 
+                            .checkbox__text сетка-каменка
+                              .counter 61
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-32")
+                          label(for="checkbox-32") <span></span> 
+                            .checkbox__text без кожуха
+                              .counter 11
+
+                    .col-xs-12.col-mob-6.col-sm-4
+
+                      .visible-mobile.js-show-filter
+                        .mobile-filter-btn
+                          span.mobile-filter-btn__title Объем парной
+                          .plus
+
+                      .filter-form__section
+                        span.filter-form__title Объем парной:
+
+                        .checkbox
+                          input(checked type="checkbox" class="checkbox" id="checkbox-1")
+                          label(for="checkbox-1") <span></span> 
+                            .checkbox__text 6-12 куб.м
+
+                        .checkbox
+                          input( type="checkbox" class="checkbox" id="checkbox-10")
+                          label(for="checkbox-10") <span></span> 
+                            .checkbox__text 12-18 куб.м
+                              .counter 8
+
+                        .checkbox
+                          input( type="checkbox" class="checkbox" id="checkbox-11")
+                          label(for="checkbox-11") <span></span> 
+                            .checkbox__text 18-24 куб.м
+                              .counter 60
+
+                        .checkbox
+                          input( type="checkbox" class="checkbox" id="checkbox-12")
+                          label(for="checkbox-12") <span></span> 
+                            .checkbox__text 24-32 куб.м
+                              .counter 29
+
+                        .checkbox
+                          input( type="checkbox" class="checkbox" id="checkbox-13")
+                          label(for="checkbox-13") <span></span> 
+                            .checkbox__text более 32 куб.м
+                              .counter 6
+
+                      .visible-mobile.js-show-filter
+                        .mobile-filter-btn
+                          span.mobile-filter-btn__title Вид топки
+                          .plus
+
+                      .filter-form__section
+                        span.filter-form__title Вид топки:
+
+                        .checkbox
+                          input(checked type="checkbox" class="checkbox" id="checkbox-14")
+                          label(for="checkbox-14") <span></span> 
+                            .checkbox__text без выноса
+                              .counter 18
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-15")
+                          label(for="checkbox-15") <span></span> 
+                            .checkbox__text с выносом
+                              .counter 85
+
+                      .visible-mobile.js-show-filter
+                        .mobile-filter-btn
+                          span.mobile-filter-btn__title Материал топки
+                          .plus
+
+                      .filter-form__section
+                        span.filter-form__title Материал топки:
+
+                        .checkbox
+                          input(checked type="checkbox" class="checkbox" id="checkbox-16")
+                          label(for="checkbox-16") <span></span> 
+                            .checkbox__text конструкционая сталь
+                              .counter 32
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-17")
+                          label(for="checkbox-17") <span></span> 
+                            .checkbox__text нержавеющая сталь
+                              .counter 11
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-18")
+                          label(for="checkbox-18") <span></span> 
+                            .checkbox__text чугун
+                              .counter 60
+
+                      .visible-mobile.js-show-filter
+                        .mobile-filter-btn
+                          span.mobile-filter-btn__title Бак (емкость бака)
+                          .plus
+
+                      .filter-form__section
+                        span.filter-form__title Бак (емкость бака):
+
+                        .checkbox
+                          input(checked type="checkbox" class="checkbox" id="checkbox-35")
+                          label(for="checkbox-35") <span></span> 
+                            .checkbox__text есть
+                              .counter 47
+
+                        .checkbox
+                          input(type="checkbox" class="checkbox" id="checkbox-36")
+                          label(for="checkbox-36") <span></span> 
+                            .checkbox__text нет
+                              .counter 28
+                
+                .reset-filter-wrap
+                  a(href="#!").btn.btn-grey <span class="icon-close"></span> Сбросить Фильтры
+              
+
+            .visible-mobile
+              a(href="#!").btn.btn-responsive.js-fast-filter-toggle Быстрые фильтры
+                span.icon
+
+            .panel.hidden-tablet
+              p.toggle-text.hidden-mobile Ассортимент печей для бани представлен такими известными производителями как Везувий, Торнадо, Greivari, (Кирасир), АТБ, Конвектика, Вира (в прошлом Гори Ясно), Варвара, Теплодар, Ермак. Среди более чем 500 моделей печей вы сможете купить печь для бани  согласно объему своего парильного помещения, а также наличию необходимых опций. Ассортимент печей для бани представлен такими известными производителями как Везувий, Торнадо, Greivari, (Кирасир), АТБ, Конвектика, Вира (в прошлом Гори Ясно), Варвара, Теплодар, Ермак. Среди более чем 500 моделей печей вы сможете купить печь для бани  согласно объему своего парильного помещения, а также наличию необходимых опций. Ассортимент печей для бани представлен такими известными производителями как Везувий, Торнадо, Greivari, (Кирасир), АТБ, Конвектика, Вира (в прошлом Гори Ясно), Варвара, Теплодар, Ермак. Среди более чем 500 моделей печей вы сможете купить печь для бани  согласно объему своего парильного помещения, а также наличию необходимых опций. Ассортимент печей для бани представлен такими известными производителями как Везувий, Торнадо, Greivari, (Кирасир), АТБ, Конвектика, Вира (в прошлом Гори Ясно), Варвара, Теплодар, Ермак.
+              div
+                a(href="#!").toggle-text-btn
+
+            ul.links-list
+              li
+                a(href="#!") Печи Везувий
+              li
+                a(href="#!") Печи Ермак
+              li
+                a(href="#!") Печи Кирасир
+              li
+                a(href="#!") Печи Варвара
+              li
+                a(href="#!") Печи с т.о
+              li
+                a(href="#!") Печи для русской бани
+              li
+                a(href="#!") Печь Vesta дровяная
+              li
+                a(href="#!") Печ MBS Happy
+              li
+                a(href="#!") Жарсталь Брандербург
+              li
+                a(href="#!") Печ Гори ясно Vira Crystal
+
+            .panel
+              ul.socials
+                li
+                  a(href="#!").vk
+                li
+                  a(href="#!").twitter
+                li
+                  a(href="#!").facebook
+                li
+                  a(href="#!").google
+
+              .items-filter
+                .items-filter__section
+                  .items-filter__title Сортировка:
+                  .items-filter__select
+                    select
+                      option По цене — по возрвстанию
+                      option По цене — по убыванию
+                      option Дате изготовления
+                      option Рейтингу
+                .items-filter__section.hidden-tablet
+                  .items-filter__title Вид каталога:
+                  .view-type
+                    span.view-type__list
+                    span.view-type__items
+
+              
+            ul.product-list-horizontal
+              li 
+                //= template/product-horizontal.jade
+              li 
+                //= template/product-horizontal.jade
+
+            ul.product-list
+              li 
+                .product
+                  .product__image.product__image--top
+                    img(src="images/product-1.jpg" alt="fake-img")
+                    .availability.availability--to-order
+                      .availability__title На заказ
+                      span.availability__icon
+                  .product__body
+                    h2.product__name 
+                      a(href="#!") Дровяная печь-камин MBS Vesta
+                    span.product__old-price 35 250 р.
+                    span.product__price 17 243 р.
+                    .btn-wrap
+                      a(href="#!").btn <span class="icon-cart"></span> Купить
+                    a(href="#!").answer-link.hidden-mobile Перезвоним за 33 сек.
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+
+              li 
+                //= template/product.jade
+   
+
+            //= template/pagination.jade
+
+            .visible-desktop
+              .facts.row
+                .col-sm-6.col-lg-12
+                  .fact
+                    span.fact__icon.icon-1
+                    span.fact__title Доставка
+                    p.fact__text Бесплатная доставка - 50 км! А также до транспортной компании.
+                .col-sm-6.col-lg-12
+                  .fact
+                    span.fact__icon.icon-2
+                    span.fact__title Пункты выдачи
+                    p.fact__text 4 пункта выдачи в Санкт- Петербурге + большой склад
+                .col-sm-6.col-lg-12
+                  .fact
+                    span.fact__icon.icon-3
+                    span.fact__title Монтаж печей
+                    p.fact__text Установка печей, каминов. Фото выполненных работ,14 монтажных бригад
+                .col-sm-6.col-lg-12
+                  .fact
+                    span.fact__icon.icon-4
+                    span.fact__title Торг уместен
+                    p.fact__text Напишите свое пожелание по цене и мы свяжемся с Вами максимально быстро.
+  
 
       .page-buffer
 

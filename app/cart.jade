@@ -1,0 +1,161 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    .wrapper
+
+      //= template/header.jade
+
+      section#middle.cart-page
+        .container.clearfix
+          .aside.aside-width
+
+            .facts
+              .fact
+                span.fact__icon.icon-1
+                span.fact__title Доставка
+                p.fact__text Бесплатная доставка - 50 км! А также до транспортной компании.
+
+              .fact
+                span.fact__icon.icon-2
+                span.fact__title Пункты выдачи
+                p.fact__text 4 пункта выдачи в Санкт- Петербурге + большой склад
+
+              .fact
+                span.fact__icon.icon-3
+                span.fact__title Монтаж печей
+                p.fact__text Установка печей, каминов. Фото выполненных работ,14 монтажных бригад
+
+              .fact
+                span.fact__icon.icon-4
+                span.fact__title Торг уместен
+                p.fact__text Напишите свое пожелание по цене и мы свяжемся с Вами максимально быстро.
+
+          .content
+  
+            .clearfix
+              //= template/yandex-modul.jade
+
+              h1.title-h1 Корзина
+            
+            .cart-title 1.  Проверьте товары и их кол-во в корзине
+            form
+              .cart-wrap
+                .table-responsive
+                  table.table-cart
+                    tr
+                      th Фото
+                      th Наименование
+                      th Кол-во
+                      th Цена
+                      th Удалить из корзины
+
+                    tr
+                      td.table-image
+                        img(src="images/cart-img.jpg", alt="image")
+                      td.product__name
+                        a(href="#!").product-name Печь MBS Happy ( МБС Хэппи)
+                      td.product__amount
+                        .counter-panel
+                          span.minus -
+                          input(type='text', value='1' readonly="readonly")
+                          span.plus +
+                      td.table-price
+                        .product__old-price 35 100 р.
+                        .product__price 6390 р.
+                        .product__currency 500 y.e.
+                          span.icon-question
+                      td
+                        a(href="#!").btn-close.btn.btn-grey
+                          span.icon-close
+
+                    tr
+                      td.table-image
+                        img(src="images/cart-img.jpg", alt="image")
+                      td.product__name
+                        a(href="#!").product-name ЖарСталь Бранденбург с чугунной плитой
+                      td.product__amount
+                        .counter-panel
+                          span.minus -
+                          input(type='text', value='1' readonly="readonly")
+                          span.plus +
+                      td.table-price
+                        .product__price 6390 р.
+                      td
+                        a(href="#!").btn-close.btn.btn-grey
+                          span.icon-close
+        
+                .text-center
+                  a(href="#!").btn.btn-grey <span class="icon-close"></span> Очистить корзину
+                  
+                .total-cost
+                  div
+                    span.icon-cart-orange
+                    .total-cost__text Сумма заказа = 
+                      span.bold 100 000 руб.
+                  div
+                    span.icon-sale-orange
+                    .total-cost__text Скидка от суммы заказа: 
+                      span 7% = 7 000 руб.
+                  div
+                    span.icon-wallet-orange
+                    .total-cost__text И того = 
+                      span.bold.background-orange 93 000 руб.
+              
+              .cart-title 2.  Выберите желаемый способ доставки или магазин для самовывоза товара
+              .grey-wrap
+                .title-h4 Желаемый способ доставки:
+
+                .radiobox
+                  input(checked type="radio" class="radio" id="radio-1" name="radd")
+                  label(for="radio-1") <span></span> 
+                    .radiobox__text <span class="bold">Другой регион.</span> Отправка транспортными компаниями. (Связь по электронной почте) 
+
+                .radiobox
+                  input( type="radio" class="radio" id="radio-2" name="radd")
+                  label(for="radio-2") <span></span> 
+                    .radiobox__text <span class="bold">Доставка.</span> Бесплатная доставка по Санкт-Петербургу от 15000 руб, менее - всего 500 руб. (разгрузка товара в стоимость доставки не входит)
+
+                .radiobox
+                  input( type="radio" class="radio" id="radio-3" name="radd")
+                  label(for="radio-3") <span></span> 
+                    .radiobox__text <span class="bold">Самовывоз.</span> В одном из 4 пунктов выдачи. 
+
+
+              .cart-title 3. Заполните контактные данные, чтобы мы могли связаться связаться с Вами для уточнения     заказа и времени доставки или самовывоза
+              .grey-wrap
+              
+                .submission-form
+                  .title-h4 Ваши контактные данные:
+                  .form-group
+                    span.submission-form__label Ваше имя *
+                    input(type="text").submission-form__form-control.col-sm-4
+
+                  .form-group
+                    span.submission-form__label Контактный телефон: * 
+                    input(type="text").submission-form__form-control.col-sm-4
+
+                  .form-group
+                    span.submission-form__label Адрес e-mail: *
+                    input(type="text").submission-form__form-control.col-sm-4
+
+                  .form-group
+                    span.submission-form__label Адрес доставки: *
+                    textarea.submission-form__textarea.submission-form__form-control
+
+                  .form-group
+                    span.submission-form__label Доп.сведения: 
+                    textarea.submission-form__textarea.submission-form__form-control
+
+                  .form-group
+                    span.submission-form__label
+                    .submission-form__caption <span>*</span> - обязательные поля для заполнения
+
+              .text-center
+                button(type="submit").btn <span class="icon-check-big"></span> Оформить заказ
+
+      .page-buffer
+
+    //= template/footer.jade

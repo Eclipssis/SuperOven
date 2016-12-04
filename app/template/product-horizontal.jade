@@ -1,0 +1,62 @@
+.product.product--horizontal.clearfix
+  .product__image.product__image--left
+    img(src="images/product-1.jpg" alt="fake-img")
+    .sale-caption
+
+  .product__right-panel
+    .availability.availability--grey.availability--avalible
+      .availability__title В наличии
+      span.availability__icon
+
+    span.product__old-price 35 250 р.
+    span.product__price 17 243 р.
+    span.product__currency 500 y.e.
+      a(href="#modal-question").icon-question.various
+      #modal-question
+
+    .btn-wrap
+      a(href="#!").btn <span class="icon-cart"></span> Купить
+    a(href="#!").answer-link Перезвоним за 33 сек.
+
+  .product__body
+    h2.product__name 
+      a(href="#!") Дровяная печь-камин MBS Vesta
+
+    ul.feature  
+      li
+        span.feature__title Объём помещения:
+        span до 120 куб.м
+      li
+        span.feature__title Вес (кг):
+        span 51
+      li
+        span.feature__title Размеры (ГхШхВ):
+        span 400х400х700
+
+    .actions-panel
+      .actions-panel__section
+        a(href="#!").actions-panel__title Отзывы 
+          span (3)
+
+        ul.rating
+          li.active(style="width: 20%")
+            span.star1
+          li
+            span.star2
+          li
+            span.star3
+          li
+            span.star4
+          li
+            span.star5
+
+      .actions-panel__section
+        a(href="#!").actions-panel__title Сравнить
+        span.icon-scale-grey
+
+      .actions-panel__section
+        a(href="#!").actions-panel__title В избранное
+        span.icon-heart-grey
+
+
+

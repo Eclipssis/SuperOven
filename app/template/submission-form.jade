@@ -1,0 +1,24 @@
+a(href="#!").btn.btn-yellow.js-toggle-form
+  span.icon-question-black
+  span.btn-text Задать свой вопрос 
+  
+form.submission-form
+
+  .form-group
+    span.submission-form__label Ваше имя *
+    input(type="text").submission-form__form-control.col-sm-4
+
+  .form-group
+    span.submission-form__label Текст вопроса*
+    textarea.submission-form__textarea.submission-form__form-control
+
+  .form-group
+    span.submission-form__label Код защиты от спама:
+    .capcha
+      img(src="images/capcha.jpg", alt="capcha")
+      input(type="text").submission-form__form-control
+
+  .form-group
+    span.submission-form__label
+    .btn <span class="icon-check"></span> Отправить
+    .submission-form__caption <span>*</span> - обязательные поля для заполнения

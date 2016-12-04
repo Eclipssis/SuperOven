@@ -1,0 +1,88 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    .wrapper
+
+      //= template/header.jade
+
+      section#middle.news-page
+        .container.clearfix
+          .aside.aside-width
+
+            .facts
+              .fact
+                span.fact__icon.icon-1
+                span.fact__title Доставка
+                p.fact__text Бесплатная доставка - 50 км! А также до транспортной компании.
+
+              .fact
+                span.fact__icon.icon-2
+                span.fact__title Пункты выдачи
+                p.fact__text 4 пункта выдачи в Санкт- Петербурге + большой склад
+
+              .fact
+                span.fact__icon.icon-3
+                span.fact__title Монтаж печей
+                p.fact__text Установка печей, каминов. Фото выполненных работ,14 монтажных бригад
+
+              .fact
+                span.fact__icon.icon-4
+                span.fact__title Торг уместен
+                p.fact__text Напишите свое пожелание по цене и мы свяжемся с Вами максимально быстро.
+
+          .content
+  
+            .clearfix
+              //= template/yandex-modul.jade
+              h1.title-h1 Новости
+            
+            .row
+              .col-xs-12.col-sm-7
+                .news.news--big
+                  a(href="#!")
+                    img(src="https://api.fnkr.net/testimg/560x570/9c2b2c/FFF/?text=fake image", alt="image")
+                  .news__body
+                    a(href="#!").news__title Монтаж печей для бани со скидкой 30%
+                    span.news__date 11.09.2016
+
+              .col-xs-12.col-sm-5
+                .row
+                  .col-mob-6.col-sm-12
+                    .news
+                      a(href="#!")
+                        img(src="https://api.fnkr.net/testimg/370x210/9c2b2c/FFF/?text=fake image", alt="image")
+                      a(href="#!").news__title Большие скидки за 2-ю покупку
+                      span.news__date 11.09.2016
+
+                  .col-mob-6.col-sm-12
+                    .news
+                      a(href="#!")
+                        img(src="https://api.fnkr.net/testimg/370x210/9c2b2c/FFF/?text=fake image", alt="image")
+                      a(href="#!").news__title Большие скидки за 2-ю покупку
+                      span.news__date 11.09.2016
+
+            .row
+              .col-mob-6.col-md-6
+                .news.news--tall
+                  a(href="#!")
+                    img(src="https://api.fnkr.net/testimg/460x210/9c2b2c/FFF/?text=fake image", alt="image")
+                  a(href="#!").news__title Большие скидки за 2-ю покупку
+                  p.news__message Если Вы сделали заказ на нашем сайте и Вам есть что сказать о нашем магазине, просто напишите отзыв о нашей работе на Яндекс.Маркете и получите 100 рублей на счет своего мобильного телефона.
+                  span.news__date 11.09.2016
+
+              .col-mob-6.col-md-6
+                .news.news--tall
+                  a(href="#!")
+                    img(src="https://api.fnkr.net/testimg/460x210/9c2b2c/FFF/?text=fake image", alt="image")
+                  a(href="#!").news__title Большие скидки за 2-ю покупку
+                  p.news__message Если Вы сделали 2-й заказ на нашем сайте, напишите об этом администратору и он выпишет для вас специальную скидку!
+                  span.news__date 11.09.2016
+    
+            //= template/pagination.jade
+
+      .page-buffer
+
+    //= template/footer.jade

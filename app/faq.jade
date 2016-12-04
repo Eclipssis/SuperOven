@@ -1,0 +1,57 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    .wrapper
+
+      //= template/header.jade
+
+      section#middle
+        .container.clearfix
+          .aside.aside-width
+
+            .facts
+              .fact
+                span.fact__icon.icon-1
+                span.fact__title Доставка
+                p.fact__text Бесплатная доставка - 50 км! А также до транспортной компании.
+
+              .fact
+                span.fact__icon.icon-2
+                span.fact__title Пункты выдачи
+                p.fact__text 4 пункта выдачи в Санкт- Петербурге + большой склад
+
+              .fact
+                span.fact__icon.icon-3
+                span.fact__title Монтаж печей
+                p.fact__text Установка печей, каминов. Фото выполненных работ,14 монтажных бригад
+
+              .fact
+                span.fact__icon.icon-4
+                span.fact__title Торг уместен
+                p.fact__text Напишите свое пожелание по цене и мы свяжемся с Вами максимально быстро.
+
+          .content
+  
+            .clearfix
+              //= template/yandex-modul.jade
+              h1.title-h1 Ответы на частые вопросы
+
+            p Не нашли ответа на ваш вопрос, задайте его здесь прямо сейчас!
+
+            //= template/submission-form.jade
+
+            ul.comment-list
+              li
+                //= template/comment.jade
+              li
+                //= template/comment.jade
+
+            //= template/pagination.jade
+  
+
+      .page-buffer
+
+    //= template/footer.jade

@@ -1,21 +1,254 @@
-header#header.header
-  .container
-    .group
-      .head-menu
-        span.menu-icon
-          span
-          span
-          span
+.mobile-dark-wrap
+header#header.header.clearfix
+
+  ul.hidden-main-menu
+    li
+      a(href="#!").icon-magic-stick  Акции
+    li
+      a(href="#!") Доставка
+    li
+      a(href="#!") Установка
+    li
+      a(href="#!") Преимущества
+    li
+      a(href="#!") Вопрос-ответ
+    li
+      a(href="#!") Контакты
+    li
+      a(href="#!").icon-heart Избранные товары
+    li
+      a(href="#!").icon-scale Сравнение товаров
+    li
+      a(href="#!").icon-eye Просмотренные товары
+
+
+  .hidden-panel.clearfix
+
+    .mobile-buttons
+      span.menu-toggle
+      span.form-toggle.js-form-toggle
+
+    form.search-form
+      input.search-form__input(type="text" placeholder="Поиск товаров или разделов")
+      button.search-form__submit(type="submit")
+
+    .header-cart
+      .header-cart__title В корзине товаров: 4
+      .header-cart__value <span>159 876</span> руб.
+      a(href="#!").header-cart__btn
+
+
+  .header-panel
+    .container.clearfix
+      .logo.aside-width
+        a(href="#!")
+          img(src="images/logo.png", alt="logo")
+
+      .header-body
+    
+        form.search-form
+          input.search-form__input(type="text" placeholder="Поиск товаров")
+          button.search-form__submit(type="submit")
+
+        .header-info
+          span.phone-icon
+          .header-info__phone-number 
+            a(href="#!") <span>8 (812)</span> 956-24-22, 
+            a(href="#!") 952-19-60
+          .header-info__shedule Мы работаем с 10<span>00</span> до 20<span>00</span>
+          .header-links.hidden-mobile
+            .header-links__request-call
+              a(href="#!") Заказать звонок
+            .header-links__location
+              a(href="#!") 4 магазина в Спб.
+
+        .header-cart
+          span.cart-icon
+          .header-cart__title В корзине товаров: 4
+          .header-cart__value <span>159 876</span> руб.
+          .header-links
+            .header-links__cart
+              a(href="#!") Перейти в корзину
+  
+      .visible-mobile.text-center
+        .header-links.header-links--mobile.clear
+          .header-links__request-call
+            a(href="#!") Заказать звонок
+          .header-links__location
+            a(href="#!") 4 магазина в Спб.
+
+  .navbar
+    .container.clearfix
+      .drowdown-wrap.aside-width
+        .drowdown.clearfix
+          .drowdown-btn-toggle.js-drowdown-toggle
+            a(href="#").drowdown-title Каталог товаров
+            span.drowdown-toggle
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          ul.drowdown-menu
+            li
+              a() Печи для бани
+              span.caret-left
+              .submenu
+
+                .submenu__section
+                  .submenu__title.icon-carton-plain Бренды:
+                  ul
+                    li
+                      a(href="#!") Печи ВЕЗУВИЙ
+                    li
+                      a(href="#!") Печи GRILL'D
+                    li
+                      a(href="#!") Печи ТОРНАДО
+                    li
+                      a(href="#!") Печи КИРАСИР
+                    li
+                      a(href="#!") Печи АТБ
+                    li
+                      a(href="#!") Печи КОНВЕКТИКА
+                    li
+                      a(href="#!") Печи VIRA (ГОРИ ЯСНО)
+                    li
+                      a(href="#!") Печи ВАРВАРА
+                    li
+                      a(href="#!") Печи ТЕПЛОДАР
+                    li
+                      a(href="#!") Печи ЕРМАК
+                .submenu__section
+                  .submenu__title.icon-modifiers Модификации:
+                  ul
+                    li
+                      a(href="#!") Печи для русской бани
+                    li
+                      a(href="#!") Печи чугунные
+                    li
+                      a(href="#!") Печи с закрытой каменкой
+                    li
+                      a(href="#!") Печи с сеткой для камней
+                    li
+                      a(href="#!") Печи с т/о
+                    li
+                      a(href="#!") Печи со стекляной дверцей
+                    li
+                      a(href="#!") Печи для топки из парной
+                    li
+                      a(href="#!") Печи с баком
+                .submenu__section
+                  .submenu__title.icon-addidional Дополнительно:
+                  ul
+                    li
+                      a(href="#!") Дымоходы
+                    li
+                      a(href="#!") Баки для воды
+                    li
+                      a(href="#!") Камни для бани
+                    li
+                      a(href="#!") Веники для бани
+                    li
+                      a(href="#!") Доп. опции к печам
+                    li
+                      a(href="#!") Светильники
+                    li
+                      a(href="#!") Двери для бани
+                    li
+                      a(href="#!") Форточки
+                    li
+                      a(href="#!") Лаки и пропитки
+                    li
+                      a(href="#!") Термометры
+                    li
+                      a(href="#!") Одежда для бани
+                    li
+                      a(href="#!") Бондарные изделия
+                    li
+                      a(href="#!") Масла и ароматизаторы
+            
+            li
+              a(href="#!") Печи-камины
+              span.caret-left
+            li
+              a(href="#!") Печи отопительные
+              span.caret-left
+            li
+              a(href="#!") Топки каминные
+              span.caret-left
+            li
+              a(href="#!") Облицовки каминов
+              span.caret-left
+            li
+              a(href="#!") Котлы
+              span.caret-left
+            li
+              a(href="#!") Дымоходы
+              span.caret-left
+            li
+              a(href="#!") Печное литье
+              
+            li
+              a(href="#!") Садовые печи
+              span.caret-left
+            li
+              a(href="#!") Товары для печника
+              span.caret-left
+            li
+              a(href="#!") Самовары
+            li
+              a(href="#!") Дистилляторы
+              span.caret-left
+            li
+              a(href="#!") Товары для бани
+              span.caret-left
+            li
+              a(href="#!") Аксессуары для камина
+            li
+              a(href="#!") Уход и ремонт
+              span.caret-left
+      
+      .main-menu-wrap
         ul.menu
           li
-            a(href='#') Item 1
+            a(href="#!").magic-stick Акции
           li
-            a(href='#') Item 2
+            a(href="#!") Доставка
           li
-            a(href='#') Item 3
-          li
-            a(href='#') Item 4
-          li
-            a(href='#') Item 5
+            a(href="#!") Установка
+          li.hidden-item
+            a(href="#!") Вопрос - Ответ
+          li.hidden-item
+            a(href="#!") Контакты
+
+        .toggle-btn
+          .submenu-toggle.js-submenu-toggle
+
+        ul.hidden-menu-item
+          li 
+            a(href="#!") Вопрос - Ответ
+          li 
+            a(href="#!") Контакты
+      
+      .right-menu-wrap
+        .right-menu
+          .title Товары:
+          .submenu-toggle.js-btn-menu-toggle
+          ul.buttons-list
+            li
+              a(href="#!").buttons-list--title Избранные товары
+              a(href="#!").item-1
+              .tooltip Избранные товаров
+            li
+              a(href="#!").buttons-list--title Сравнение товаров
+              a(href="#!").item-2
+              .tooltip Сравнение товаров
+            li
+              a(href="#!").buttons-list--title Просмотренные товары
+              a(href="#!").item-3
+              .tooltip Просмотренные товаров
+      
+
+      
+
+
   // container end
 // header

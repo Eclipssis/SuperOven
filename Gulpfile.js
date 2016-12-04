@@ -62,7 +62,9 @@ gulp.task('clean', function (cb) {
 gulp.task('html:build', function () {
     gulp.src(path.src.html) 
         .pipe(rigger())
-        .pipe(jade()) 
+        .pipe(jade({
+            pretty: true
+        })) 
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });

@@ -37,7 +37,22 @@ h4, .title-h4
 h5, .title-h5
   font-size: $title-h5-size
 
+.page-title 
+  font-size: 24px
+  line-height: 1.1
+  margin-bottom: 15px
+  display: block
+  > a
+    font-size: 13px
+    color: #666666 
+    display: inline-block
+    margin-left: 15px
+
+.bold
+  font-weight: 700
+
 p
+  line-height: 20px
   margin: 0 0 20px
   padding: 0
 
@@ -47,28 +62,221 @@ ul
 
 a
   color: $color-link
-  text-decoration: none
+  text-decoration: underline
   &:hover
-    text-decoration: underline
+    text-decoration: none
     color: darken($color-link, 10%)
+
+
 
 img
   vertical-align: middle
   max-width: 100%
 
+.instruction-link 
+  margin-top: 40px
+  margin-bottom: 50px
+  &:last-child
+    margin-bottom: 20px
+  a
+    position: relative
+    color: $orange
+    text-decoration: underline
+    display: inline-block
+    padding-left: 65px
+    &:hover, &:focus 
+      text-decoration: none
+    &:before
+      content: ' '
+      position: absolute
+      top: 50%
+      margin-top: -27px
+      left: 0
+      background-image: url('../images/sprite.png')
+      
+
+.icon-word:before
+  +sprite($format-word)
+.icon-pdf:before
+  +sprite($format-pdf)
+.icon-exel:before
+  +sprite($format-exel)
+.icon-rar:before
+  +sprite($format-zip)
+
+.answer-link
+  position: relative
+  display: inline-block
+  font-size: 14px
+  // color: $orange
+  padding-left: 26px
+  margin-top: 11px
+  margin-bottom: 5px
+  &:before
+    position: absolute
+    content: ' '
+    background-image: url('../images/sprite.png')
+    +sprite($phone-orange)   
+    top: 50%
+    margin-top: -12px
+    left: 0
+
+.list-disc-orange
+  margin-left: 10px
+  li
+    position: relative
+    padding-left: 15px
+    line-height: 20px
+    &:before
+      position: absolute
+      content: ' '
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background-color: $orange
+      top: 7px
+      left: 0
+
+.text-notice
+  font-weight: 700
+  color: $orange
+  display: inline-block
+  vertical-align: bottom
+  margin: 0 15px 5px
+  font-size: 12px
+  +tablet
+    margin-left: 0
+    margin-top: 5px
+
+div.margin-bottom-0
+  margin-bottom: 0
+
+.background-orange
+  background-color: $orange
+  padding: 3px 6px
+
+.toggle-text-btn:before
+  content: 'Показать полностью'
+.toggle-text-btn.open:before
+  content: ' Скрыть текст'
+
+.toggle-text
+  height: 80px
+  overflow: hidden
+  margin-bottom: 5px
+
+.toggle-text.open
+  height: 100%
+
+// colors
 
 
 
+// icons
 
+span[class^="icon-"]
+  display: inline-block
+  vertical-align: middle
+  background-image: url('../images/sprite.png')
 
+span.icon-cart
+  margin-right: 3px
+  vertical-align: bottom
+  +sprite($cart-white)
 
+.icon-question
+  margin-left: 3px
+  +sprite($question-icon)
 
+.icon-question-orange 
+  +sprite($question-orange)
 
+.icon-question-black
+  margin-right: 18px
+  +sprite($question-black)
 
+span.icon-scale-grey
+  vertical-align: sub
+  +sprite($scales-grey)
 
+.icon-heart-grey
+  vertical-align: sub
+  +sprite($heart-grey)
 
+.icon-close
+  margin-right: 10px
+  +sprite($close)
 
+.icon-mail
+  +sprite($mail-footer)
 
+.icon-phone
+  +sprite($phone-footer)
 
+.icon-clock
+  +sprite($clock-footer)
 
+.icon-location 
+  +sprite($location-footer)
 
+.icon-user
+  +sprite($user)
+
+.icon-message
+  +sprite($message)
+
+.icon-notice
+  margin-right: 12px
+  +sprite($notice-icon)
+
+.icon-location-grey
+  margin-right: 6px
+  +sprite($location-grey)
+
+.icon-like-grey
+  margin-right: 12px
+  +sprite($like-grey)
+
+.icon-sale-grey
+  margin-right: 12px
+  +sprite($sale-grey)
+
+.icon-magic-wand
+  margin-right: 5px
+  +sprite($magic-wand)
+
+.icon-roket
+  margin-right: 5px
+  +sprite($roket)
+
+.icon-sale-orange
+  +sprite($sale-orange)
+
+.icon-cart-orange
+  +sprite($cart-orange)
+
+.icon-wallet-orange
+  +sprite($wallet)
+
+.icon-check-big
+  +sprite($big-check)
+  margin-right: 10px
+
+span.icon-orange-roket
+  display: inline-block
+  width: 70px
+  height: 70px
+  border-radius: 50%
+  position: relative
+  border: 2px solid $orange
+  background-image: none
+  margin-bottom: 25px
+  &:before
+    position: absolute
+    content: ' '
+    top: 50%
+    left: 50%
+    margin-top: -21.5px
+    margin-left: -21.5px
+    background-image: url('../images/sprite.png')
+    +sprite($orange-roket)

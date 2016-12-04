@@ -1,0 +1,350 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    .wrapper
+
+      //= template/header.jade
+
+      section#middle.news-page
+        .container.clearfix
+          .aside.aside-width
+
+            .facts
+              .fact
+                span.fact__icon.icon-1
+                span.fact__title Доставка
+                p.fact__text Бесплатная доставка - 50 км! А также до транспортной компании.
+
+              .fact
+                span.fact__icon.icon-2
+                span.fact__title Пункты выдачи
+                p.fact__text 4 пункта выдачи в Санкт- Петербурге + большой склад
+
+              .fact
+                span.fact__icon.icon-3
+                span.fact__title Монтаж печей
+                p.fact__text Установка печей, каминов. Фото выполненных работ,14 монтажных бригад
+
+              .fact
+                span.fact__icon.icon-4
+                span.fact__title Торг уместен
+                p.fact__text Напишите свое пожелание по цене и мы свяжемся с Вами максимально быстро.
+
+          .content
+
+            //= template/yandex-modul.jade
+            
+            //= template/breadcrumb.jade
+
+            h1.title-h1 Новости
+            
+            .product-single
+              
+              .product-single__images
+                // Place somewhere in the <body> of your page
+                .sale-caption
+                .slider-wrap
+                  #slider.flexslider
+                    ul.slides
+                      li
+                        a.fancybox(rel='gallery1', href='http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg', title='Twilight Memories (doraartem)')
+                          img(src='images/slide-big.jpg' alt="big")
+                      li
+                        a.fancybox(rel='gallery1', href='http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg', title='Twilight Memories (doraartem)')
+                          img(src='images/slide-big.jpg' alt="big")
+                      li
+                        a.fancybox(rel='gallery1', href='http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg', title='Twilight Memories (doraartem)')
+                          img(src='images/slide-big.jpg' alt="big")
+                      li
+                        a.fancybox(rel='gallery1', href='http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg', title='Twilight Memories (doraartem)')
+                          img(src='images/slide-big.jpg' alt="big")
+
+
+                      // items mirrored twice, total of 12
+                  #carousel.flexslider
+                    ul.slides
+                      li
+                        img(src='images/slide-1.jpg' alt="slide-img")
+                      li
+                        img(src='images/slide-2.jpg' alt="slide-img")
+                      li
+                        img(src='images/slide-3.jpg' alt="slide-img")
+                      li
+                        img(src='images/slide-4.jpg' alt="slide-img")
+
+                      // items mirrored twice, total of 12
+  
+              .product-single__detail
+                a(href="#!").answer-link Перезвоним за 33 сек.
+                .product-single__cost
+                  .product-single__old-price 35 250 р.
+                  .product-single__price 17 243 р.
+                  span.product-single__currency 500 y.e.
+                    span.icon-question
+
+                .product-single__buttons
+                  .availability.availability--grey.availability--avalible
+                    .availability__title В наличии
+                    span.availability__icon
+
+                  .actions-panel
+                    .actions-panel__section
+                      a(href="#!").actions-panel__title Сравнить
+                      span.icon-scale-grey
+
+                    .actions-panel__section
+                      a(href="#!").actions-panel__title В избранное
+                      span.icon-heart-grey
+                  
+                  a(href="#!").btn.btn-max <span class="icon-cart"></span> Купить
+                  a(class="various" href="#fancy-modal").btn.btn-red.btn-max <span class="icon-roket"></span> Купить в 1 клик
+
+                  #fancy-modal
+                    .fancy-modal__body
+                      .modal-title Купить в 1 клик
+                      span.icon-orange-roket
+                      p.modal-text Вы хотите купить Печь Везувий Уют - 100, стоимостью
+                      .current-price 14 390 р.
+
+                    form.submission-form
+                      .form-group
+                        span.submission-form__label Ваше имя *
+                        input(type="text").submission-form__form-control.col-sm-4
+
+                      .form-group
+                        span.submission-form__label Контактный телефон: * 
+                        input(type="text").submission-form__form-control.col-sm-4
+
+                      .form-group
+                        span.submission-form__label Комментарий:  
+                        textarea.submission-form__textarea.submission-form__form-control
+
+                      .form-group
+                        span.submission-form__label
+                        .submission-form__caption <span>*</span> - обязательные поля для заполнения
+
+                      .text-center
+                        a(href="#!").btn <span class="icon-check-big"></span> Оформить заказ
+
+            ul.tabs
+              li.tab-link.current(data-tab='tab-1') Описание и характеристики
+                span.plus
+              li.tab-link(data-tab='tab-2') Модификации (5)
+                span.plus
+              li.tab-link(data-tab='tab-3') Видео (1)
+                span.plus
+              li.tab-link(data-tab='tab-4') Инструкция, паспорт (2)
+                span.plus
+              li.tab-link(data-tab='tab-5') Отзывы (5) 
+                ul.rating
+                  li.active(style="width: 20%")
+                    span.star1
+                  li
+                    span.star2
+                  li
+                    span.star3
+                  li
+                    span.star4
+                  li
+                    span.star5
+                span.plus
+
+            #tab-1.tab-content.current
+              .tab-content__body
+                .tab-content__section
+                  h4.title-h4 Печь Везувий Уют-100
+                  p Оборудованная каминным экраном модель дровяной печи Уют 150 С позволяет достаточно эффективно и быстро нагреть помещение площадью до 80 кв. м. Среднее время повышения температуры до нужного уровня не превышает 30–60 минут, при переводе оборудования на скоростной режим работы (доступ воздуха полностью открыт). Когда же обеспечивается длительное горение (воздух практически не поступает в топку), печь поддерживает комфортные для пребывания людей микроклиматические условия на протяжении 5 часов .
+                  p Среди особенностей модели стоит обратить внимание на:
+                  ul.list-disc-orange
+                    li наличие стекла, прозрачного, выдерживающего высокие температуры и не требующего очищения, благодаря специальной системе обдува воздухом. Через этот экран удобно наблюдать за горящими в топке дровами;
+                    li достаточно современный дизайн, позволяющий модели неплохо смотреться в интерьере как жилого, так и промышленного, и административного здания, для отопления которых она используется;
+                    li компактные размеры и верхнее подключение к дымоходу, благодаря которым оборудование занимает минимум места;
+                    li высокое качество изготовления, увеличивающее эксплуатационный срок печи до 10–15 лет.
+
+                .tab-content__section
+                  h4.title-h4 Характеристики Везувий Уют-100
+
+                  table.table-striped
+                    tr
+                      td.table-title(colspan="2") Производитель:
+                    tr
+                      td Страна
+                      td Россия
+                    tr
+                      td.table-title(colspan="2") Характеристики:
+
+                    tr
+                      td Мощность, кВт  
+                      td 120
+                    tr
+                      td Расчетный объем отапливаемого помещения, м3  
+                      td 400х400х700
+                    tr
+                      td Габаритные размеры (Ш×Г×В), мм 
+                      td 51
+                    tr
+                      td Масса, кг
+                      td 120
+                    tr
+                      td Диаметр дымохода, мм
+                      td нет
+                    tr
+                      td Теплообменник
+                      td нет
+                    tr
+                      td Духовка
+                      td со стеклом
+                    tr
+                      td Дверка
+                      td эмалированная
+                    tr
+                      td Материал/кожух
+                      td верхнее
+                    tr
+                      td Подключение к дымоходу
+                      td пристенное
+                    tr
+                      td Расположение
+                      td печь-камин
+                    tr
+                      td Тип печи
+                      td шамотная
+                    tr
+                      td Топка
+                      td есть
+
+            #tab-2.tab-content
+              .tab-content__body
+                ul.modify-list
+                  li 
+                    //= template/product-modify.jade
+                  li 
+                    //= template/product-modify.jade
+                  li 
+                    //= template/product-modify.jade
+                  li 
+                    //= template/product-modify.jade
+                  li 
+                    //= template/product-modify.jade
+                  li 
+                    //= template/product-modify.jade
+
+            #tab-3.tab-content
+              .tab-content__body
+                h4.title-h4 Инструкции Печи Везувий Уют-100
+
+                .video-wrap
+                  iframe(width='100%', height='100%', src='https://www.youtube.com/embed/TDIVGIUXffI', frameborder='0', allowfullscreen='')
+
+            #tab-4.tab-content
+              .tab-content__body
+                h4.title-h4 Инструкции Печи Везувий Уют-100
+                
+                .instruction-link
+                  a(href="#!").icon-word Инструкция по эксплуатации 12 mb
+                .instruction-link
+                  a(href="#!").icon-pdf Инструкция по эксплуатации 17 mb
+                .instruction-link
+                  a(href="#!").icon-exel Инструкция по эксплуатации 3 mb
+                .instruction-link
+                  a(href="#!").icon-rar Паспорт печи Везувий, rar 2 mb
+
+            #tab-5.tab-content
+              .tab-content__body
+                h4.title-h4 Отзывы о печи Везувий Уют-100
+
+                p Здесь Вы можете прочитать отзывы посетителей нашего сайта или оставить свой отзыв. Ваше мнение очень важно для нас
+                
+                ul.comment-list
+                  li
+                    //= template/comment-2.jade
+                  li
+                    //= template/comment-2.jade
+            
+                a(href="#!").btn.btn-yellow.js-toggle-form
+                  span.icon-question-black
+                  span.btn-text Оставте свой отзыв
+
+                span.text-notice (Обращаем ваше внимание, что отзыв будет отправлен на модерацию)
+                  
+                form.submission-form
+
+                  .form-group
+                    span.submission-form__label Ваше имя *
+                    input(type="text").submission-form__form-control.col-sm-4
+
+                  .form-group
+                    span.submission-form__label Оценка товара *
+                    ul.rating
+                      li.active(style="width: 20%")
+                        span.star1
+                      li
+                        span.star2
+                      li
+                        span.star3
+                      li
+                        span.star4
+                      li
+                        span.star5
+
+                  .form-group
+                    span.submission-form__label Текст отзыва *  
+                    textarea.submission-form__textarea.submission-form__form-control
+
+                  .form-group
+                    span.submission-form__label Код защиты от спама:
+                    .capcha
+                      img(src="images/capcha.jpg", alt="capcha")
+                      input(type="text").submission-form__form-control
+
+                  .form-group
+                    span.submission-form__label
+                    .btn <span class="icon-check"></span> Отправить
+                    .submission-form__caption <span>*</span> - обязательные поля для заполнения
+
+            .carousel-wrap.carousel-wrap--grey
+              .title-h4 С этим товаром обычно покупают:
+              .owl-carousel.product-carousel
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+
+            .carousel-wrap.carousel-wrap--grey
+              .title-h4 Вы уже смотрели:
+              .owl-carousel.product-carousel
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+                .item
+                  //= template/product-carousel.jade
+
+      .page-buffer
+
+    //= template/footer.jade
